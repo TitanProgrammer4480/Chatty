@@ -4,7 +4,6 @@ import User from "../models/user.model.js";
 
 import cloudinary from "../lib/cloudinary.js";
 import { generateToken } from "../lib/utils.js";
-import { clearScreenDown } from "readline";
 
 export const signup = async (req, res) => {
     const { fullName, email, password } = req.body;

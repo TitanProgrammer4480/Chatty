@@ -52,12 +52,6 @@ CLOUDINARY_API_KEY="your_cloudinary_api_key"
 CLOUDINARY_API_SECRET="your_cloudinary_api_secret"
 ```
 
-Frontend Configuration:
-Create a .env file in the frontend folder with the following environment variables:
-```bash
-REACT_APP_API_URL="http://localhost:5000"
-```
-
 4. Start the backend server:
 ```
 cd backend
@@ -74,30 +68,12 @@ The application will be available at http://localhost:3000.
 🔑 Authentication
 User authentication is managed through JWT tokens.
 
-During login, the backend returns a JWT token that should be stored on the client-side (preferably in localStorage or cookies).
+During login, the backend returns a JWT token that should is stored on the client-side.
 
-The JWT token should be sent with each request that requires authorization via the Authorization header:
+The JWT token is sent with each request that requires authorization via the Authorization header:
 ```http
 Authorization: Bearer <your_jwt_token>
 ```
-
-📡 API Endpoints
-Authentication & User Management
-POST /api/auth/register – Register a new user.
-
-POST /api/auth/login – Log in an existing user.
-
-GET /api/auth/user – Get details of the currently authenticated user.
-
-Message Management
-GET /api/messages – Retrieve all messages in a chat.
-
-POST /api/messages – Send a new message (text or image).
-
-GET /api/messages/:id – Retrieve a specific message by id.
-
-Image Upload
-POST /api/upload – Upload an image to Cloudinary and return the image URL.
 
 📜 License
 This project is licensed under the MIT License.

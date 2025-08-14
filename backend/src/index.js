@@ -10,7 +10,7 @@ import messageRoutes from "./routes/message.routes.js";
 import { connectDB } from "./lib/db.js";
 import { app, server } from "./lib/socket.js";
 
-import { PORT, NODE_ENV } from "env"
+import { PORT, NODE_ENV } from "./env.js"
 
 const __dirname = path.resolve();
 
